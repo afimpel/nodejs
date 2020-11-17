@@ -8,7 +8,8 @@ if [ $UUID != 0 ]; then
 	exit 1;
 else
   cd /root
-  curl -sL https://deb.nodesource.com/setup_8.x | bash -
+  apt-get install -y curl
+  curl -sL https://deb.nodesource.com/setup_current.x | bash -
   apt-get update
   apt-get install -y nodejs
   apt-get upgrade -y
